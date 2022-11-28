@@ -8,7 +8,9 @@ import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.sem08.R
+import com.example.sem08.adapter.LugarAdapter
 import com.example.sem08.databinding.FragmentHomeBinding
 import com.example.sem08.viewmodel.HomeViewModel
 
@@ -32,6 +34,17 @@ class HomeFragment : Fragment() {
         binding.addLugarFabBt.setOnClickListener {
             findNavController().navigate(R.id.action_nav_home_to_addLugar)
         }
+
+        //cargar datos
+        val lugarAdapter = LugarAdapter()
+        val reciclador = binding.reciclador
+        reciclador.adapter = lugarAdapter
+        reciclador.layoutManager = LinearLayoutManager(requireContext())
+
+        homeViewModel.getLugares.observe(viewLifecycleOwner){
+            lugares -> lugarAdapter.setLugares(lugares)
+        }
+
         return binding.root
     }
 
