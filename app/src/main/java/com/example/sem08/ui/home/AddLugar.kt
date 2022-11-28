@@ -40,7 +40,7 @@ class AddLugar : Fragment() {
 
         if(nombre.isNotEmpty()){
 
-            val lugar = Lugar(0,nombre,correo,telefono,web)
+            val lugar = Lugar("",nombre,correo,telefono,web)
             //proceso de agregar a DB
 
         }else{
