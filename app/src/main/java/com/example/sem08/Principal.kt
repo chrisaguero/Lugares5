@@ -30,7 +30,7 @@ class Principal : AppCompatActivity() {
         binding = ActivityPrincipalBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        setSupportActionBar(binding.appBarPrincipal.toolbar)
+        //setSupportActionBar(binding.appBarPrincipal.toolbar)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView

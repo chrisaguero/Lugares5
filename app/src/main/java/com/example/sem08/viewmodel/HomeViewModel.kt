@@ -4,7 +4,7 @@ import android.app.Application
 import androidx.lifecycle.*
 import com.example.sem08.data.LugarDao
 import com.example.sem08.model.Lugar
-import com.example.sem08.repository.LugarRepository
+import com.example.sem08.ui.repository.LugarRepository
 
 class HomeViewModel(application: Application) : AndroidViewModel(application) {
     val getLugares : MutableLiveData<List<Lugar>>

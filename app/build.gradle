@@ -70,10 +70,18 @@ dependencies {
 
     //firebase DB almacenamiento
     implementation 'com.google.firebase:firebase-firestore-ktx'
+
+    //firebase storage
+    implementation 'com.google.firebase:firebase-storage-ktx'
     
 
     //Navegacion entre los fragmentos
     implementation 'androidx.navigation:navigation-fragment-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.3'
     implementation 'androidx.navigation:navigation-dynamic-features-fragment:2.5.3'
+
+
+    //implementacion de github
+    implementation 'com.github.bumptech.glide:glide:4.2.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.2.0'
 }
